@@ -1,0 +1,6 @@
+@use '../utilities/variables';
+
+.game-card {
+    background: variables.$game-card-color;
+    border-radius: 1.8rem;
+}

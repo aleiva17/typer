@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typer | Ranking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+<body class="container bg-color">
+    <main class="d-flex flex-column justify-content-center align-items-center">
+        <!-- Title -->
+        <h1 class="main-title ranking__title--size text-center my-5">TYPER RANKING</h1>
+        <!-- Table -->
+        <table class="table table-light">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Apodo</th>
+                    <th scope="col">WPM</th>
+                    <th scope="col">Fecha</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+        <!-- Buttons -->
+        <div class="my-3">
+            <a role="button" class="btn btn-light" href="./index.html">Ver Instrucciones</a>
+            <a role="button" class="btn btn-warning" href="./game.html">Jugar</a>
+        </div>
+    </main>
+
+    <script src="./js/storage/index.js" type="module" defer></script>
+</body>
+</html>

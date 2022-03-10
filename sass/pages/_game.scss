@@ -1,0 +1,114 @@
+@use '../components/title';
+@use '../components/game_card';
+
+// Grid system
+.game-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 992px)  {
+    .game-grid {
+        grid-template-areas:
+            "timer game wpm";
+    }   
+}
+
+@media (max-width: 991px) {
+    .game-grid {
+        grid-template-areas:
+            "timer"
+            "game"
+            "wpm";
+    }
+}
+
+#time-container {
+    grid-area: timer;
+}
+
+#game-container {
+    grid-area: game;
+    height: 240px;
+}
+
+#wpm-container {
+    grid-area: wpm;
+    min-width: 240px;
+}
+
+// Title size
+.game__title--size {
+    font-size: max(9.6vw, 5rem);
+}
+
+// Nickname input
+.nickname-input {
+    font-size: 2rem;
+    background-color: transparent;
+    text-align: left;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: gray;
+    width: min(372px, 75vw);
+}
+
+.nickname-input:focus {
+    border-color: white;
+}
+
+// Spinner
+#spinner {
+    opacity: 0.0;
+}
+
+.spinner-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.spinner {
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: 1s spin infinite ease-in-out;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#time {
+    position: absolute;
+}
+
+// Text input
+.word-input {
+    font-size: 2.2rem;
+    text-align: center;
+    // margin-top: 1rem;
+    width: min(330px, 85%);
+}
+
+// Game
+#word {
+    font-size: 3.2rem;
+}
+
+// Input Status: Success & Fail
+.status {
+    height: 64px;
+    width: 64px;
+}
+
+// WPM & Time Text 
+.info-text-size {
+    font-weight: 600;
+    font-size: 6.4rem;
+}

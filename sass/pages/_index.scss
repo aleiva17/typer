@@ -1,0 +1,23 @@
+@use '../components/title';
+
+.article__ol {
+    li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.index__title--size {
+    font-size: 9vw;
+}
+
+@media (min-width: 410px) and (max-width: 750px) {
+    .index__title--size {
+        font-size: 12vw;
+    }
+}
+
+@media (max-width: 409px) {
+    .index__title--size {
+        font-size: 13vw;
+    }
+}
